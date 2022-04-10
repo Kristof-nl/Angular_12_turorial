@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'tutorial';
+  title = '12';
+  data = 'hello code'
+  num = 100;
+
+  getVal() {
+    return "Code step by step"
+  }
 }
