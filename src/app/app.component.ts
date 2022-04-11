@@ -10,6 +10,9 @@ export class AppComponent {
   data = 'hello code'
   num = 100;
   displayVal: string ="";
+  count: number = 0;
+  name: string = "Peter";
+  disable: boolean = false;
 
   getVal() {
     return "Code step by step"
@@ -26,5 +29,10 @@ export class AppComponent {
   getValue(val: string) {
     console.warn(val);
     this.displayVal = val;
+  }
+
+  counter(type: string)
+  {
+    type === 'add' ? this.count++ : this.count--;
   }
 }

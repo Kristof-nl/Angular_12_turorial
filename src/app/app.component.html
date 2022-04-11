@@ -1,12 +1,17 @@
-<h1>Hello Angular {{title}}  {{data}}</h1>
+<h1 class="heading">Hello Angular {{title}}  {{data}}</h1>
+
+
+<input type="text" value={{name}} disabled={{disable}}>
+<br><br>
+<input type="text" [value]=name [disabled]="disable">
 
 <app-user-list></app-user-list>
 <app-students-list></app-students-list>
 <app-country></app-country>
-
+<app-header></app-header>
 <app-login></app-login>
 
-<p>Box value is {{displayVal}}</p>
+<!-- <p>Box value is {{displayVal}}</p>
 
 <button (click)="getValue(box.value)">Click Me</button>
 <br>
@@ -20,9 +25,14 @@
 <input type="text" #box3 placeholder="blur box" (blur)="getData(box3.value)" />
 <br>
 <br>
-<input type="text" #box4 placeholder="input box" (input)="getData(box4.value)" />
+<input type="text" #box4 placeholder="input box" (input)="getData(box4.value)" /> -->
 
 
 <!-- <h1 (mouseover)="getData('mouse over')">Code Step by Step</h1>
 
 <h1 (mouseleave)="getData('leave')">Krzysztof</h1> -->
+
+
+<button (click)="counter('minus')">--</button>
+<p>Count: {{count}}</p>
+<button (click)="counter('add')">++</button>
