@@ -13,6 +13,25 @@ export class AppComponent {
   count: number = 0;
   name: string = "Peter";
   disable: boolean = false;
+  show= false;
+  color = "orange";
+  bgColor = "red";
+  users = ['Anil', "Bruce", "Sam", "Mark"]
+  userDetails = [
+    {name: 'Anil', email: 'anil@test.com', phone: '12345', accounts: ['facebook', 'gmail', 'twitter']},
+    {name: 'Bruce', email: 'bruce@test.com', phone: '32888', accounts: ['naszaklasa', 'Instagram', 'twitter']},
+    {name: 'Sam', email: 'sam@test.com', phone: '277745', accounts: ['Twich', 'gmail', 'facebook']},
+    {name: 'Mark', email: 'mark@test.com', phone: '856342', accounts: ['Skype', 'Outlook', 'twitter']}
+  ]
+
+
+  updateColor() {
+    this.color = "skyblue";
+    this.bgColor = "yellow"
+  }
+
+
+
 
   getVal() {
     return "Code step by step"
