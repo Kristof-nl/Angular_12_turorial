@@ -1,8 +1,30 @@
 <app-header></app-header>
 
-<ul *ngFor="let user of userDetails">
+<h1>{{title}}</h1>
+<h1>{{title | slice :3:8}}</h1>
+
+<h1>{{user | json | uppercase}}</h1>
+<h1>{{003.3411111 | number: '1.2-6'}}</h1>
+<h1>{{100 | currency: 'EUR'}}</h1>
+
+<!-- <h1>{{title | uppercase}}</h1>
+<h1>{{title | lowercase}}</h1>
+<h2>{{today | date: 'fullDate'}}</h2> -->
+
+  <!-- <input type="text" #box placeholder="Write a text" />
+  <button (click)="getVal(box.value)">Click Me</button> -->
+
+<!-- <input type="text" [(ngModel)]="data">
+
+<h2>{{data}}</h2> -->
+
+<!-- <app-child2 (updateValueEvent)="updateValue($event)"></app-child2>
+
+<h1>{{data}}</h1> -->
+
+<!-- <ul *ngFor="let user of userDetails">
   <app-user-deatail [item]="user"></app-user-deatail>
-</ul>
+</ul> -->
 
 
 <!-- <app-child [item]="data"></app-child>

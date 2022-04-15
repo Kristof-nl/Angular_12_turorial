@@ -1,20 +1,26 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = '12';
-  data = 10;
+
+  user = {
+    name: "Krzysztof",
+    age: 35
+  }
+
+  title = 'I like apple';
+  today = Date();
+  data: any = '';
   num = 100;
   displayVal: string ="";
   count: number = 0;
   name: string = "Peter";
+  age:number = 35;
   disable: boolean = false;
   show= false;
   color = "orange";
@@ -36,11 +42,22 @@ export class AppComponent {
     {name: "Leon", email: "leon@test.com"},
     {name: "Xavier", email: "xavier@test.com"}
   ]
+
+
+  getVal(item: string)
+  {
+    console.warn(item);
+  }
+
+  updateValue(item: string) {
+    console.warn(item);
+    this.data = item;
+  }
   
 
-  updateData() {
-    this.data = Math.floor(Math.random()*10);
-  }
+  // updateData() {
+  //   this.data = Math.floor(Math.random()*10);
+  // }
 
   addTask(item: string) {
     this.list.push({id: this.list.length + 1, taskName: item});
@@ -69,9 +86,9 @@ export class AppComponent {
     this.display = !this.display;
   }
 
-  getVal() {
-    return "Code step by step"
-  }
+  // getVal() {
+  //   return "Code step by step"
+  // }
 
   getName(name: string | number) {
     alert(name);

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { UserAuthModule } from './user-auth/user-auth.module';
 import { FormsModule } from '@angular/forms';
-import {MatButtonModule} from '@angular/material/button'
+import { MatButtonModule } from '@angular/material/button'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { ChildComponent } from './child/child.component';
 import { UserDeatailComponent } from './user-deatail/user-deatail.component';
+import { Child2Component } from './child2/child2.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { UserDeatailComponent } from './user-deatail/user-deatail.component';
     CountryComponent,
     ChildComponent,
     UserDeatailComponent,
+    Child2Component,
 
   ],
   imports: [
