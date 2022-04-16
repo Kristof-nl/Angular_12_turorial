@@ -1,11 +1,22 @@
 <app-header></app-header>
 
-<h1>{{title}}</h1>
+<form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
+  <input type="text" name="name" required #name="ngModel" placeholder="Enter Name" ngModel>
+  <br> <span *ngIf="name.invalid && name.touched" style="color: red;">Please enter a valid input</span> <br>
+  <input type="password" name="password" minlength="2"  required #password="ngModel"  placeholder="Enter Password" ngModel>
+  <br><span *ngIf="password.invalid && password.touched">Please enter a valid input</span><br>
+  <button [disabled]="loginForm.invalid">Login</button>
+  
+</form>
+
+<!-- <h2>{{30 | user: 80}}</h2> -->
+
+<!-- <h1>{{title}}</h1>
 <h1>{{title | slice :3:8}}</h1>
 
 <h1>{{user | json | uppercase}}</h1>
 <h1>{{003.3411111 | number: '1.2-6'}}</h1>
-<h1>{{100 | currency: 'EUR'}}</h1>
+<h1>{{100 | currency: 'EUR'}}</h1> -->
 
 <!-- <h1>{{title | uppercase}}</h1>
 <h1>{{title | lowercase}}</h1>

@@ -43,6 +43,10 @@ export class AppComponent {
     {name: "Xavier", email: "xavier@test.com"}
   ]
 
+  loginUser(item: any)
+  {
+    console.warn(item)
+  }
 
   getVal(item: string)
   {

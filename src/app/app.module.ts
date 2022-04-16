@@ -17,6 +17,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { ChildComponent } from './child/child.component';
 import { UserDeatailComponent } from './user-deatail/user-deatail.component';
 import { Child2Component } from './child2/child2.component';
+import { UserPipe } from './pipes/user.pipe';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { Child2Component } from './child2/child2.component';
     ChildComponent,
     UserDeatailComponent,
     Child2Component,
+    UserPipe,
 
   ],
   imports: [
