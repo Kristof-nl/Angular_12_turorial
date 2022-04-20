@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { UserAuthModule } from './user-auth/user-auth.module';
 import { FormsModule } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button'
+import { MatButtonModule } from '@angular/material/button';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,10 @@ import { ChildComponent } from './child/child.component';
 import { UserDeatailComponent } from './user-deatail/user-deatail.component';
 import { Child2Component } from './child2/child2.component';
 import { UserPipe } from './pipes/user.pipe';
+import { RedElDirective } from './red-el.directive';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +36,10 @@ import { UserPipe } from './pipes/user.pipe';
     UserDeatailComponent,
     Child2Component,
     UserPipe,
+    RedElDirective,
+    HomeComponent,
+    AboutComponent,
+    UserComponent,
 
   ],
   imports: [
@@ -41,7 +50,8 @@ import { UserPipe } from './pipes/user.pipe';
     NgbModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
